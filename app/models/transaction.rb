@@ -1,3 +1,4 @@
-class Transaction < ApplicationRecord
-  belongs_to :category
+class Category < ApplicationRecord
+  has_many :transactions, dependent: :destroy
+  attribute :total_amount, :integer
 end

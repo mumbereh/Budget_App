@@ -1,4 +1,3 @@
-class WelcomeController < ApplicationController
-  def index
-  end
+class LandingPageController < ApplicationController
+  def home; end
 end

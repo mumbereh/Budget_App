@@ -1,2 +1,4 @@
 class User < ApplicationRecord
-end
+    has_many :categories
+    has_many :transactions
+  end
