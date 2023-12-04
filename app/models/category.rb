@@ -1,3 +1,4 @@
 class Category < ApplicationRecord
-  belongs_to :user
+  has_many :transactions, dependent: :destroy
+  attribute :total_amount, :integer
 end
