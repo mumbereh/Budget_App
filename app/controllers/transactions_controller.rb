@@ -2,7 +2,7 @@
 
 class TransactionsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_category, except: [:index, :show]
+  before_action :set_category, except: %i[index show]
 
   def index
     load_transactions_and_total_amount
