@@ -2,11 +2,10 @@
 
 class TransactionsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_category, except: [:index]
+  before_action :set_category, except: [:index, :show]
+
   def index
-    @category = Category.find(params[:category_id])
-    @transactions = @category.transactions.order(created_at: :desc)
-    @total_amount = @transactions.sum(:amount)
+    load_transactions_and_total_amount
   end
 
   def show
@@ -15,23 +14,35 @@ class TransactionsController < ApplicationController
   end
 
   def new
-    @category = Category.find(params[:category_id])
-    @transaction = @category.transactions.build
+    build_new_transaction
   end
 
   def create
-    @transaction = @category.transactions.build(transaction_params)
-    if @transaction.save
-      redirect_to category_transactions_path(@category), notice: 'Transaction created successfully!'
-    else
-      render :new
-    end
+    build_new_transaction
+    save_transaction
   end
 
   private
 
   def set_category
     @category = current_user.categories.find(params[:category_id])
+  end
+
+  def load_transactions_and_total_amount
+    @transactions = @category.transactions.order(created_at: :desc)
+    @total_amount = @transactions.sum(:amount)
+  end
+
+  def build_new_transaction
+    @transaction = @category.transactions.build
+  end
+
+  def save_transaction
+    if @transaction.save
+      redirect_to category_transactions_path(@category), notice: 'Transaction created successfully!'
+    else
+      render :new
+    end
   end
 
   def transaction_params

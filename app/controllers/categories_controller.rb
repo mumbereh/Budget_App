@@ -4,17 +4,14 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource
 
+  before_action :set_category, only: [:show, :destroy, :transactions]
+
   def index
     @categories = Category.all
-
-    # Calculate total amount for each category
-    @categories.each do |category|
-      category.total_amount = category.transactions.sum(:amount)
-    end
+    calculate_total_amount
   end
 
   def show
-    @category = Category.find(params[:id])
     @transactions = @category.transactions
   end
 
@@ -24,29 +21,38 @@ class CategoriesController < ApplicationController
 
   def create
     @category = current_user.categories.build(category_params)
+    save_category
+  end
+
+  def destroy
+    @category.destroy
+    redirect_to categories_path, notice: 'Category was successfully destroyed.'
+  end
+
+  def transactions
+    @transactions = @category.transactions
+    @total_amount = @transactions.sum(:amount)
+  end
+
+  private
+
+  def set_category
+    @category = Category.find(params[:id])
+  end
+
+  def calculate_total_amount
+    @categories.each do |category|
+      category.total_amount = category.transactions.sum(:amount)
+    end
+  end
+
+  def save_category
     if @category.save
       redirect_to categories_path, notice: 'Category created successfully!'
     else
       render :new
     end
   end
-
-  def destroy
-    @category = Category.find(params[:id])
-    @category.destroy
-
-    redirect_to categories_path, notice: 'Category was successfully destroyed.'
-  end
-
-  def transactions
-    @category = Category.find(params[:category_id])
-    @transactions = @category.transactions
-
-    # Calculate total amount
-    @total_amount = @transactions.sum(:amount)
-  end
-
-  private
 
   def category_params
     params.require(:category).permit(:name, :icon)
