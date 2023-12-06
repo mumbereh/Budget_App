@@ -164,3 +164,11 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #0056b3;
 }
+
+.head1{
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  background-color: transparent;
+}

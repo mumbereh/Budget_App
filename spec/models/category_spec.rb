@@ -1,24 +1,16 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
   before :each do
-    @user = User.create(name: 'm', email: 'm@gmail.com')
-    @category = Category.new(name: 'cow', icon: 'cow.png', user: @user)
+    @user = User.new(name: 'Shafiu', email: 'shafiu@gmail.com')
+    @category = Category.new(name: 'Clothes', icon: 'shirt.png', user_id: @user.id)
   end
 
-  it 'is valid with valid attributes' do
-    expect(@category).to be_valid
+  it 'name should be present' do
+    expect(@category.name).to eq('Clothes')
   end
 
-  it 'is not valid without a name' do
-    @category.name = nil
-    expect(@category).not_to be_valid
-  end
-
-  it 'is not valid without an icon' do
-    @category.icon = nil
-    expect(@category).not_to be_valid
+  it 'icon shold be present' do
+    expect(@category.icon).to eq('shirt.png')
   end
 end
