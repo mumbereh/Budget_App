@@ -40,6 +40,13 @@
     <li><a href="https://www.ror-lang.org/en/">Rails</a></li>
   </ul>
 </details>
+### Deployment
+
+You can deploy this project using:
+
+- Deployed using render: [Live](https://budget-app-3wkx.onrender.com) 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Key Features <a name="key-features"></a>
 
@@ -68,7 +75,54 @@ To use this project :
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Deploy**
+
+**User Management:**
+-Register user
+-Implement secure login functionality
+-Category Management:
+
+**Display a list of categories**
+-Add new categories
+-Delete categories (with confirmation)
+-Transaction Management:
+
+**Display a list of transactions**
+-Add transactions to categories with amounts
+-Delete individual transactions
+-Security Measures:
+
+**Implement secure password policies**
+Employ encryption techniques for sensitive data
+-User Interface/Experience:
+-Design an intuitive interface
+-Implement navigation for easy usability
+-Integration:
+
+**Integrate authentication with category and transaction functionalities**
+-Ensure seamless flow between different features
+-Error Handling:
+
+**Implement robust error handling mechanisms**
+-Provide clear error messages to users
+-Data Integrity:
+
+**Enforce data validation for user inputs**
+-Ensure consistent data representation
+-Confirmation Mechanisms:
+
+**Integrate confirmations for critical actions (e.g., category and transaction deletion)**
+-Security Auditing:
+
+**Regularly audit and update security protocols**
+-Monitor and address potential vulnerabilities
+-Documentation:
+
+**Provide clear documentation for users**
+-Document codebase for future maintenance
+-Testing:
+
+-Conduct thorough testing for each functionality
+-Perform user acceptance testing for overall system validation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
