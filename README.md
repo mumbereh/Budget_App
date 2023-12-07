@@ -9,13 +9,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
+- [💻 Getting Started](#getting-started))
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -140,7 +134,7 @@ If you like this project, you can support me by clicking on the start
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
+I would like to thank Gregoire Vella whose design served as a blueprint
 I would like to thank my code reviewer and microverse community
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
