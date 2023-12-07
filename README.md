@@ -1,28 +1,27 @@
   <h3>Budget App</h3>
 
-</div>
 
 
 
-# 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
+- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 # 📖 Blog App <a name="about-project"></a>
@@ -40,13 +39,13 @@
     <li><a href="https://www.ror-lang.org/en/">Rails</a></li>
   </ul>
 </details>
-### Deployment
+## 🚀 Live Demo <a name="live-demo"></a>
 
-You can deploy this project using:
+- [Live Demo Link](https://mumbereh.github.io/Capston-project/)
 
-- Deployed using render: [Live](https://budget-app-3wkx.onrender.com) 
+## 💻 Getting Started <a name="getting-started"></a>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
 
 ### Key Features <a name="key-features"></a>
 
