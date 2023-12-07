@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root 'home_page#welcom'
+  root 'landing_page#splash'
 
   devise_for :users
   resources :categories, only: %i[index show new create destroy] do
