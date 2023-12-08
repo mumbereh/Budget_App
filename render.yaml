@@ -2,7 +2,6 @@ databases:
   - name: kay
     databaseName: kay
     user: kay_user
-
 services:
   - type: web
     name: budget_app
