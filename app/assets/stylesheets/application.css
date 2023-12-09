@@ -6,6 +6,7 @@ body {
 
 #nav {
   top: 0;
+  /* padding: 20px; */
 }
 
 .nav-btn1:last-child {
@@ -38,7 +39,7 @@ h2,
 .total-transactions h2,
 .card-header b {
   font-size: 18px;
-  background-color: #eee;
+color: #fff;
 }
 
 .transaction-details {
