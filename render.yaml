@@ -1,0 +1,18 @@
+databases:
+  - name: habert
+    databaseName: habert
+    user: habert_user
+
+services:
+  - type: web
+    name: app
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: habert
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
